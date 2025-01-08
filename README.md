@@ -1,4 +1,4 @@
-# Phidata Video AI Summarizer Agent 🎥🎤🖬
+# HighlighAI - An AI Agentic System for Video Summarizing🎥🚀
 
 A **Streamlit-based application** for analyzing video content and extracting actionable insights using advanced AI models. Powered by **Gemini 2.0 Flash Exp**, this tool enables users to upload video files and receive detailed, user-friendly analysis.
 
