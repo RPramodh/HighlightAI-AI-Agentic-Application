@@ -74,3 +74,31 @@ def initialize_agent():
         tools=[DuckDuckGo()],
         markdown=True,
     )
+```
+
+### Uploading and processing the video file
+
+```python
+processed_video = upload_file(video_path)
+while processed_video.state.name == "PROCESSING":
+    time.sleep(1)
+    processed_video = get_file(processed_video.name)
+```
+
+### Generating the prompt and AI analysis
+
+```python
+analysis_prompt = (
+    f"""
+    Analyze the uploaded video for content and context.
+    Respond to the following query using video insights and supplementary web research:
+    {user_query}
+
+    Provide a detailed, user-friendly, and actionable response.
+    """
+)
+
+response = multimodal_Agent.run(analysis_prompt, videos=[processed_video])
+
+```
+
